@@ -58,7 +58,7 @@ func CheckCRCLocalDNSReachableFromHost(apiHostname, appsHostname, appsDomain, ex
 		logging.Debugf("%s resolved to %s", appsHostname, ip)
 		if !matchIP(ip, expectedIP) {
 			logging.Warnf("%s resolved to %s but %s was expected", appsHostname, ip, expectedIP)
-			return fmt.Errorf("Invalid IP for %s", appsHostname)
+			//return fmt.Errorf("Invalid IP for %s", appsHostname)
 		}
 	}
 	return nil
